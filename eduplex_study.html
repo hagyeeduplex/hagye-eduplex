@@ -171,6 +171,21 @@
     .btn-close-fullscreen:hover{background:rgba(255,255,255,.22);}
     .fullscreen-imgs{width:100%;max-width:900px;display:flex;flex-direction:column;gap:16px;}
     .fullscreen-imgs img{width:100%;border-radius:8px;display:block;}
+
+    /* ── 성적향상 카드 ── */
+    .sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;}
+    @media(max-width:700px){.sc-grid{grid-template-columns:1fr;}}
+    .sc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;}
+    .sc-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+    .sc-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:#FFF8E1;color:#B8860B;border:1px solid #FFD700;}
+    .sc-school{font-size:12px;color:#888;}
+    .sc-mid{display:flex;align-items:center;gap:8px;}
+    .sc-subject{font-size:15px;font-weight:700;color:#00012D;}
+    .sc-arrow{color:#FFD700;font-size:18px;font-weight:900;}
+    .sc-result{display:flex;flex-direction:column;}
+    .sc-score{font-size:22px;font-weight:800;color:#00012D;line-height:1.1;}
+    .sc-rise{font-size:11px;color:#e44;font-weight:700;}
+    .sc-comment{font-size:12px;color:#555;line-height:1.65;background:#f9f9f9;border-radius:8px;padding:9px 11px;border-left:3px solid #FFD700;}
   </style>
 </head>
 <body>
@@ -221,6 +236,115 @@
       <div><h2>🏆 명예의 전당</h2></div>
       <button class="add-btn" onclick="openHofModal()">＋ 이미지 추가</button>
     </div>
+    <!-- 성적향상 사례 -->
+    <div style="margin-bottom:32px;">
+      <h3 style="font-size:15px;font-weight:700;color:#00012D;margin-bottom:4px;">📈 재원생 성적향상 사례 <span style="font-size:12px;color:#888;font-weight:400;">2024년 2학기</span></h3>
+      <div class="sc-grid">
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">중간고사</span><span class="sc-school">자운고 1학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">수학</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">100점</span><span class="sc-rise">만점 달성 🎉</span></div>
+          </div>
+          <div class="sc-comment">개별지도 수업에서 체계적인 이해도 확인을 도와준 덕분에 공부했어요!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">창동고 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">사회문화</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">1등급</span><span class="sc-rise">5등급 → 1등급 ↑4</span></div>
+          </div>
+          <div class="sc-comment">어려운 파트도 시험 기간 전부터 집중적으로 학습하여 공부했습니다!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">창동고 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">한국지리</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">1등급</span><span class="sc-rise">5등급 → 1등급 ↑4</span></div>
+          </div>
+          <div class="sc-comment">틀린 문제의 정오답 근거를 꼼꼼하게 체크하여 오답을 줄였습니다!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">창동고 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">세계사</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">1등급</span><span class="sc-rise">5등급 → 1등급 ↑4</span></div>
+          </div>
+          <div class="sc-comment">다양한 오개념을 활용하여 개념을 단단하게 숙지했습니다!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">창동고 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">윤리와사상</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">1등급</span><span class="sc-rise">5등급 → 1등급 ↑4</span></div>
+          </div>
+          <div class="sc-comment">단어식 학습을 통해 세부적인 주요 개념을 정확하게 학습했습니다!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">혜성여고 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">국어</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">2등급</span><span class="sc-rise">5등급 → 2등급 ↑3</span></div>
+          </div>
+          <div class="sc-comment">학교 수업을 노트정리하고 3회독 이상 공부했어요!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">혜성여고 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">국어</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">2등급</span><span class="sc-rise">5등급 → 2등급 ↑3</span></div>
+          </div>
+          <div class="sc-comment">학교 수업을 노트정리하고 3회독 이상 공부했어요!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">중평중 3학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">국어·영어</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">ALL 100</span><span class="sc-rise">전과목 만점 🎉</span></div>
+          </div>
+          <div class="sc-comment">학교 수업을 열심히 듣고 담당 선생님의 든든한 도움으로 목표를 이뤘어요!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">중평중 3학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">국어·영어</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">ALL 100</span><span class="sc-rise">전과목 만점 🎉</span></div>
+          </div>
+          <div class="sc-comment">부족한 부분을 개별지도로 도움을 받으며 서술형 공부했습니다!</div>
+        </div>
+
+        <div class="sc-card">
+          <div class="sc-top"><span class="sc-badge">기말고사</span><span class="sc-school">하계중 2학년</span></div>
+          <div class="sc-mid">
+            <span class="sc-subject">과학</span>
+            <span class="sc-arrow">→</span>
+            <div class="sc-result"><span class="sc-score">ALL 100</span><span class="sc-rise">만점 달성 🎉</span></div>
+          </div>
+          <div class="sc-comment">해습, 복습, 오개념학습을 철저히 하여 완오답 근거를 찾아 공부했어요!</div>
+        </div>
+
+      </div>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border);margin-bottom:24px;">
+
     <div id="hofArea">
       <div class="hof-empty" id="hofEmpty">아직 추가된 이미지가 없습니다. 위 버튼으로 추가하세요.</div>
       <div class="hof-grid" id="hofGrid"></div>
