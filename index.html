@@ -1371,9 +1371,70 @@ async function saveAll(){
 
 /* MODAL */
 const MODALS={
-  coaching:{title:'상담 프로그램 (Coaching)',sub:'코칭 매니저 1:1 맞춤 상담',body:`<div class="minfo-box"><div class="minfo-title">📋 상담 내용</div><ul class="minfo-list"><li>코칭 매니저와 1:1 문자 상담으로 컨디션·이슈 체크</li><li>최적의 공부 마인드 형성</li><li>주 1~2회 심층 면담 (동기부여·공부 마인드·진로상담)</li><li>장기적 학습 방향성 설계</li></ul></div>`},
-  training:{title:'관리 프로그램 (Training)',sub:'체계적인 학습 계획 & 일일 관리',body:`<div class="minfo-box"><div class="minfo-title">📊 관리 내용</div><ul class="minfo-list"><li>텀 스케줄러 기반 일일 계획 기록</li><li>당일 학습 포인트 점검</li><li>교재·학습법·노트작성법 코칭</li><li>데일리체크로 하루 마무리 관리</li></ul></div>`},
-  tutoring:{title:'개별지도 프로그램 (Tutoring)',sub:'원하는 과목 1:1 맞춤 수업',body:`<div class="minfo-box"><div class="minfo-title">✏️ 수업 내용</div><ul class="minfo-list"><li>원하는 과목 1:1 튜터링</li><li>매니저가 직접 학습 계획 수립</li><li>교재별 학습 진도 관리</li><li>오답 관리 및 취약점 집중 보완</li></ul></div>`},
+  coaching:{title:'상담 프로그램 (Coaching)',sub:'1:1 정기상담 · 문진상담',body:`
+    <div class="minfo-box">
+      <div class="minfo-title">🎯 정기상담 — 목표설정·동기부여</div>
+      <ul class="minfo-list">
+        <li>1:1 상담을 통한 동기부여 및 공부에 대한 마음 형성</li>
+        <li>흥미 및 적성 진단을 통한 구체적인 진로 방향 설정</li>
+      </ul>
+    </div>
+    <div class="minfo-box" style="margin-top:14px;">
+      <div class="minfo-title">📋 문진상담 — 스타트체크</div>
+      <ul class="minfo-list">
+        <li>학습 전 점검: 컨디션 및 학습 준비도 점검</li>
+      </ul>
+    </div>
+  `},
+  training:{title:'관리 프로그램 (Training)',sub:'코칭 기반 학습 관리',body:`
+    <div class="minfo-box">
+      <div class="minfo-title">🗓️ 학습 계획 도구</div>
+      <ul class="minfo-list">
+        <li><strong>셀프리더 [일일 플래너]</strong> — 매일 당일 학습계획·분량 작성</li>
+        <li><strong>텀스케줄러 [월간 계획표]</strong> — 날짜별 학습분량을 월단위로 제공</li>
+        <li><strong>포트폴리오 [중장기 계획표]</strong> — 최대 6개월 단위의 장기 전략 설정</li>
+      </ul>
+    </div>
+    <div class="minfo-box" style="margin-top:14px;">
+      <div class="minfo-title">⭐ CHAMP 학습법</div>
+      <ul class="minfo-list">
+        <li>과목별 CHAMP 학습시트를 통해 상위 1% 학생들의 체계적인 학습법 훈련</li>
+      </ul>
+    </div>
+    <div class="minfo-box" style="margin-top:14px;">
+      <div class="minfo-title">🏫 학습실 트레이닝</div>
+      <ul class="minfo-list">
+        <li>휴대폰 반납 및 개인 자리에서 학습 진행 — 최적의 학습 환경 조성</li>
+      </ul>
+    </div>
+    <div class="minfo-box" style="margin-top:14px;">
+      <div class="minfo-title">✅ 데일리 체크</div>
+      <ul class="minfo-list">
+        <li>역질문 점검을 통해 공부한 내용에 대한 이해도 점검 및 부족한 부분 보완</li>
+      </ul>
+    </div>
+  `},
+  tutoring:{title:'개별지도 프로그램 (Tutoring)',sub:'티칭 & 메타인지 수업',body:`
+    <div class="minfo-box">
+      <div class="minfo-title">✏️ 전과목 개별지도 수업</div>
+      <ul class="minfo-list">
+        <li>스스로 생각하고 설명하는 질문 학습 방식 — 학습 효과를 극대화한 수업법</li>
+        <li>1:3 순환지도 방식의 수업</li>
+      </ul>
+    </div>
+    <div class="minfo-box" style="margin-top:14px;">
+      <div class="minfo-title">📐 개별지도 수업 7단계</div>
+      <ul class="minfo-list">
+        <li><strong>1단계</strong> 학교수업 리뷰 & 체크테스트 — 수업 리뷰노트로 학교 수업을 복습하고 숙제를 확인한 후 전 시간에 배운 내용을 체크테스트로 점검</li>
+        <li><strong>2단계</strong> 학습 목표 설정 — 오늘 공부의 핵심과 목적을 알고 공부를 시작</li>
+        <li><strong>3단계</strong> 스스로 생각해 보며 개념 이해하기 — 능동적인 학습 진행</li>
+        <li><strong>4단계</strong> 개념 노트정리 & 기본 문제 풀이 — 문제적용력을 기름</li>
+        <li><strong>5단계</strong> 오답 정리 & 심화 문제 풀이 — 튜터 힌트로 오답정리, 문제 응용력 강화</li>
+        <li><strong>6단계</strong> 확인 테스트 — 오늘의 학습목표 달성 여부 점검</li>
+        <li><strong>7단계</strong> 숙제를 통한 자기주도학습 — 부족한 부분 보완, 공부습관 형성</li>
+      </ul>
+    </div>
+  `},
 };
 function openModal(key){
   const d=MODALS[key];if(!d)return;
