@@ -823,6 +823,36 @@ input[type=file].hidden{display:none;}
             </div>
           </div>
         </div>
+        <div style="background:#fff; border:1.5px solid #e0e4f0; border-radius:12px; padding:20px 24px; width:100%; max-width:800px;">
+          <div style="font-size:12px; color:#888; margin-bottom:10px;">📌 교습비 반환기준 — 1/2</div>
+          <div style="position:relative;display:inline-block;width:100%;">
+            <img id="noticeImg4" src="https://raw.githubusercontent.com/hagyeeduplex/hagye-eduplex/main/교습비등_반환기준_1001.jpg"
+               alt="교습비 반환기준 1" style="width:100%; border-radius:8px; display:block;">
+            <div class="img-edit-overlay" onclick="event.stopPropagation();openNoticeImgModal(4)">
+              <button class="img-edit-btn">🖼 이미지 변경</button>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff; border:1.5px solid #e0e4f0; border-radius:12px; padding:20px 24px; width:100%; max-width:800px;">
+          <div style="font-size:12px; color:#888; margin-bottom:10px;">📌 교습비 반환기준 — 2/2</div>
+          <div style="position:relative;display:inline-block;width:100%;">
+            <img id="noticeImg5" src="https://raw.githubusercontent.com/hagyeeduplex/hagye-eduplex/main/교습비등_반환기준_1002.jpg"
+               alt="교습비 반환기준 2" style="width:100%; border-radius:8px; display:block;">
+            <div class="img-edit-overlay" onclick="event.stopPropagation();openNoticeImgModal(5)">
+              <button class="img-edit-btn">🖼 이미지 변경</button>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff; border:1.5px solid #e0e4f0; border-radius:12px; padding:20px 24px; width:100%; max-width:800px;">
+          <div style="font-size:12px; color:#888; margin-bottom:10px;">📌 학원설립·운영등록증명서</div>
+          <div style="position:relative;display:inline-block;width:100%;">
+            <img id="noticeImg6" src="https://raw.githubusercontent.com/hagyeeduplex/hagye-eduplex/main/학원설립.webp"
+               alt="학원설립 운영등록증명서" style="width:100%; border-radius:8px; display:block;">
+            <div class="img-edit-overlay" onclick="event.stopPropagation();openNoticeImgModal(6)">
+              <button class="img-edit-btn">🖼 이미지 변경</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1254,7 +1284,7 @@ async function deleteProgramImg(key){
 }
 function applyProgramImages(imgs){
   const noticeImgs=siteData.noticeImgs||{};
-  [1,2,3].forEach(n=>{if(noticeImgs['img'+n]){const el=document.getElementById('noticeImg'+n);if(el)el.src=noticeImgs['img'+n];}});
+  [1,2,3,4,5,6].forEach(n=>{if(noticeImgs['img'+n]){const el=document.getElementById('noticeImg'+n);if(el)el.src=noticeImgs['img'+n];}});
   const cardMap={'coaching-img':'coachingCard','training-img':'trainingCard','tutoring-img':'tutoringCard'};
   Object.keys(cardMap).forEach(key=>{if(imgs[key]){const el=document.getElementById(cardMap[key]);if(el){el.style.backgroundImage=`url(${imgs[key]})`;el.style.backgroundSize='cover';el.style.backgroundPosition='center';}}});
 }
