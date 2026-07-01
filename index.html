@@ -1470,9 +1470,55 @@ function openModal(key){
   const d=MODALS[key];if(!d)return;
   document.getElementById('mTitle').textContent=d.title;
   document.getElementById('mSub').textContent=d.sub;
-  document.getElementById('mBody').innerHTML=d.body;
+  // 본문 + 갤러리
+  const imgs=(siteData.progGallery&&siteData.progGallery[key])||[];
+  const itemsHtml=imgs.map((url,i)=>`
+    <div class="pgal-item">
+      <img src="${esc(url)}" alt="사진 ${i+1}">
+      <button class="pgal-del" onclick="delGalleryImg('${key}',${i})" title="삭제">✕</button>
+    </div>`).join('');
+  const addHtml=`
+    <label class="pgal-add" title="사진 추가">
+      <span class="pgal-add-icon">📷</span>
+      <span>사진 추가</span>
+      <input type="file" accept="image/*" style="display:none" onchange="addGalleryImg('${key}',this)">
+    </label>`;
+  document.getElementById('mBody').innerHTML=d.body+`
+    <div class="pgal-wrap">
+      <div class="pgal-title">📸 지점 사진</div>
+      <div class="pgal-grid" id="pgal-${key}">${itemsHtml}${addHtml}</div>
+    </div>`;
   document.getElementById('modal').classList.add('on');
   document.body.style.overflow='hidden';
+}
+
+function addGalleryImg(key, input){
+  const file=input.files[0];
+  if(!file) return;
+  const CLOUD='dzueymouy', PRESET='hagye_upload';
+  const fd=new FormData();
+  fd.append('file',file);fd.append('upload_preset',PRESET);
+  showToast('⏳ 업로드 중...');
+  fetch('https://api.cloudinary.com/v1_1/'+CLOUD+'/image/upload',{method:'POST',body:fd})
+    .then(r=>r.json()).then(data=>{
+      if(!data.secure_url){showToast('❌ 업로드 실패');return;}
+      if(!siteData.progGallery) siteData.progGallery={};
+      if(!siteData.progGallery[key]) siteData.progGallery[key]=[];
+      siteData.progGallery[key].push(data.secure_url);
+      db.ref('siteData').set(siteData).then(()=>{
+        showToast('✅ 사진 추가 완료!');
+        openModal(key);
+      });
+    }).catch(()=>showToast('❌ 업로드 오류'));
+}
+
+function delGalleryImg(key, idx){
+  if(!confirm('이 사진을 삭제할까요?')) return;
+  siteData.progGallery[key].splice(idx,1);
+  db.ref('siteData').set(siteData).then(()=>{
+    showToast('🗑 삭제 완료');
+    openModal(key);
+  });
 }
 function closeModal(e){
   if(!e||e.target===document.getElementById('modal')){
