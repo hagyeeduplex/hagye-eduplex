@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>진짜 공부가 되는 매니지먼트 | 에듀플렉스 하계점 2학기 로드맵</title>
 <meta name="description" content="VLT 16타입 학습유형검사로 우리 아이를 먼저 진단합니다. 에듀플렉스 하계점 2학기 무료 상담 신청.">
+
+<!-- Open Graph / 카톡·문자 링크 미리보기 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="에듀플렉스 하계점">
+<meta property="og:title" content="진짜 공부가 되는 매니지먼트 | 에듀플렉스 하계점 2학기 로드맵">
+<meta property="og:description" content="같은 시간 앉아있어도, 아이마다 필요한 방법은 다릅니다. VLT 16타입 학습유형검사 기반 2학기 무료 진단상담 접수중.">
+<meta property="og:image" content="https://hagyeeduplex.github.io/hagye-eduplex/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://hagyeeduplex.github.io/hagye-eduplex/2hakgi.html">
+<meta property="og:locale" content="ko_KR">
+
+<!-- 카카오톡 -->
+<meta property="al:web:url" content="https://hagyeeduplex.github.io/hagye-eduplex/2hakgi.html">
+
+<!-- 트위터/기타 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="진짜 공부가 되는 매니지먼트 | 에듀플렉스 하계점 2학기 로드맵">
+<meta name="twitter:description" content="같은 시간 앉아있어도, 아이마다 필요한 방법은 다릅니다.">
+<meta name="twitter:image" content="https://hagyeeduplex.github.io/hagye-eduplex/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -180,18 +201,14 @@
   .type-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:4px 0 6px;}
   .type-cell{
     aspect-ratio:1;border-radius:12px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.14);
     display:flex;align-items:center;justify-content:center;
-    font-size:13px;font-weight:600;color:#5C6690;
-  }
-  .type-cell.feat{
-    color:#fff;font-weight:700;cursor:pointer;
+    font-size:13px;font-weight:700;color:#fff;cursor:pointer;
     background:rgba(140,176,255,.14);
     border:1.4px solid rgba(140,176,255,.5);
     transition:.15s;
   }
-  .type-cell.feat.active{
+  .type-cell:active{transform:scale(.94);}
+  .type-cell.active{
     background:var(--coral);border-color:var(--coral);color:#fff;
   }
   .type-hint{font-size:11.5px;color:#7F8AB0;margin-top:14px;text-align:center;}
@@ -670,9 +687,9 @@
 
   // vlt type detail
   const detailBox = document.getElementById('typeDetail');
-  document.querySelectorAll('.type-cell.feat').forEach(cell=>{
+  document.querySelectorAll('.type-cell').forEach(cell=>{
     cell.addEventListener('click', ()=>{
-      document.querySelectorAll('.type-cell.feat').forEach(c=>c.classList.remove('active'));
+      document.querySelectorAll('.type-cell').forEach(c=>c.classList.remove('active'));
       cell.classList.add('active');
       detailBox.textContent = 'TYPE ' + cell.textContent.trim() + ' — ' + cell.dataset.d;
     });
