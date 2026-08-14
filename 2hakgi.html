@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>진짜 공부가 되는 매니지먼트 | 에듀플렉스 하계점 2학기 로드맵</title>
+<meta name="description" content="VLT 16타입 학습유형검사로 우리 아이를 먼저 진단합니다. 에듀플렉스 하계점 2학기 무료 상담 신청.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<style>
+  :root{
+    --ink:#132038;
+    --ink-soft:#4b5670;
+    --paper:#F7F8FA;
+    --paper-raised:#FFFFFF;
+    --line:#E2E5EB;
+    --brand:#1F4FD8;
+    --brand-deep:#12308F;
+    --brand-tint:#EAF0FF;
+    --coral:#FF5A38;
+    --coral-tint:#FFEDE8;
+    --gold:#E8A93B;
+    --radius:18px;
+    --radius-sm:10px;
+    --maxw:480px;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    font-family:'PretendardVariable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--maxw);margin:0 auto;position:relative;background:var(--paper);}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  section{padding:56px 22px;}
+  h1,h2,h3,p{margin:0;}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);
+    color:#fff;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 18px;
+    font-size:13px;
+    letter-spacing:.01em;
+  }
+  .topbar b{color:#8CB0FF;font-weight:700;}
+  .topbar .call{
+    background:var(--coral);color:#fff;border-radius:999px;
+    padding:6px 12px;font-weight:700;font-size:12.5px;white-space:nowrap;
+    text-decoration:none;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:44px 22px 40px;
+    background:
+      radial-gradient(120% 90% at 15% -10%, #EAF0FF 0%, transparent 55%),
+      linear-gradient(180deg,#FFFFFF 0%, var(--paper) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;font-weight:700;color:var(--brand-deep);
+    background:var(--brand-tint);
+    padding:6px 12px;border-radius:999px;
+    margin-bottom:18px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--coral);
+    animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  h1.hero-title{
+    font-size:30px;line-height:1.32;font-weight:800;letter-spacing:-0.02em;
+    margin-bottom:16px;
+  }
+  h1.hero-title em{
+    font-style:normal;
+    background:linear-gradient(180deg, transparent 62%, #C9DBFF 62%);
+  }
+  .hero-sub{
+    font-size:15.5px;line-height:1.7;color:var(--ink-soft);
+    margin-bottom:26px;
+  }
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--ink);color:#fff;
+    padding:14px 20px;border-radius:999px;
+    font-weight:700;font-size:14.5px;text-decoration:none;
+    box-shadow:0 10px 24px -8px rgba(19,32,56,.45);
+  }
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:6px;
+    border:1px solid var(--line);background:#fff;color:var(--ink);
+    padding:14px 18px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none;
+  }
+  .hero-meta{
+    margin-top:28px;display:flex;gap:0;border-top:1px solid var(--line);padding-top:18px;
+  }
+  .hero-meta div{flex:1;text-align:left;}
+  .hero-meta .num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--brand-deep);}
+  .hero-meta .lbl{font-size:11.5px;color:var(--ink-soft);margin-top:2px;}
+
+  /* ---------- section heading ---------- */
+  .sec-eyebrow{
+    font-size:12px;font-weight:700;color:var(--coral);
+    letter-spacing:.04em;margin-bottom:10px;text-transform:uppercase;
+  }
+  h2.sec-title{font-size:23px;line-height:1.4;font-weight:800;letter-spacing:-0.01em;margin-bottom:12px;}
+  .sec-desc{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:26px;}
+
+  /* ---------- VS comparison ---------- */
+  .vs-grid{display:flex;flex-direction:column;gap:12px;}
+  .vs-card{
+    border-radius:var(--radius);
+    padding:20px;
+    border:1px solid var(--line);
+  }
+  .vs-card.dim{background:#fff;}
+  .vs-card.lit{
+    background:linear-gradient(160deg,#16204a,#0c1730);
+    color:#fff;border:none;
+    box-shadow:0 18px 40px -18px rgba(15,25,60,.5);
+  }
+  .vs-label{font-size:12px;font-weight:700;opacity:.7;margin-bottom:10px;letter-spacing:.02em;}
+  .vs-card.lit .vs-label{color:#9DB6FF;opacity:1;}
+  .vs-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+  .vs-list li{font-size:13.8px;line-height:1.55;display:flex;gap:9px;}
+  .vs-card.dim .vs-list li::before{content:"–";color:#B7BECC;font-weight:700;width:14px;flex:none;}
+  .vs-card.lit .vs-list li::before{content:"✓";color:#7FD3A0;font-weight:700;width:14px;flex:none;}
+
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);margin-top:16px;background:#fff;}
+  table.cmp{width:100%;border-collapse:collapse;font-size:12.6px;min-width:420px;}
+  table.cmp th, table.cmp td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--line);}
+  table.cmp th{background:#F2F4F8;font-weight:700;color:var(--ink-soft);font-size:12px;}
+  table.cmp td:first-child, table.cmp th:first-child{text-align:left;font-weight:600;}
+  table.cmp tr:last-child td{border-bottom:none;}
+  .yes{color:#1E9E5B;font-weight:800;}
+  .part{color:var(--gold);font-weight:800;}
+  .no{color:#C3C8D2;font-weight:800;}
+  .col-us{background:var(--brand-tint);}
+  .note{font-size:11.5px;color:#9AA1B0;margin-top:10px;}
+
+  /* ---------- VLT signature section ---------- */
+  .vlt-section{
+    background:var(--ink);
+    color:#fff;
+    border-radius:0;
+  }
+  .vlt-section .sec-eyebrow{color:#FF9C7F;}
+  .vlt-section h2.sec-title{color:#fff;}
+  .vlt-section .sec-desc{color:#B7C1DB;}
+  .vlt-stats{display:flex;gap:10px;margin:22px 0 26px;}
+  .vlt-stat{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius-sm);padding:14px 10px;text-align:center;}
+  .vlt-stat .n{font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:600;color:#8CB0FF;}
+  .vlt-stat .l{font-size:11px;color:#9AA6C4;margin-top:4px;line-height:1.4;}
+
+  .type-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:4px 0 6px;}
+  .type-cell{
+    aspect-ratio:1;border-radius:12px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:600;color:#5C6690;
+  }
+  .type-cell.feat{
+    color:#fff;font-weight:700;cursor:pointer;
+    background:rgba(140,176,255,.14);
+    border:1.4px solid rgba(140,176,255,.5);
+    transition:.15s;
+  }
+  .type-cell.feat.active{
+    background:var(--coral);border-color:var(--coral);color:#fff;
+  }
+  .type-hint{font-size:11.5px;color:#7F8AB0;margin-top:14px;text-align:center;}
+  .type-detail{
+    margin-top:12px;min-height:64px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:var(--radius-sm);padding:14px 16px;
+    font-size:12.8px;line-height:1.6;color:#C4CCE2;
+    display:flex;align-items:center;
+  }
+
+  .vlt-note{
+    margin-top:22px;
+    background:rgba(255,255,255,.05);
+    border:1px dashed rgba(255,255,255,.22);
+    border-radius:var(--radius-sm);
+    padding:16px;font-size:12.8px;line-height:1.6;color:#C4CCE2;
+  }
+
+  /* ---------- timeline SC/DC ---------- */
+  .timeline{display:flex;flex-direction:column;gap:0;margin-top:8px;}
+  .tstep{
+    display:flex;gap:14px;padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .tstep:last-child{border-bottom:none;}
+  .tmark{flex:none;width:44px;height:44px;border-radius:12px;
+    background:var(--brand-tint);color:var(--brand-deep);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:12px;}
+  .tstep.mid .tmark{background:var(--coral-tint);color:var(--coral);}
+  .tbody h3{font-size:15px;font-weight:800;margin-bottom:4px;}
+  .tbody .ttime{font-size:11.5px;color:var(--ink-soft);margin-bottom:8px;}
+  .tbody ul{margin:0;padding-left:16px;font-size:13px;line-height:1.65;color:var(--ink-soft);}
+  .tbody ul li{margin-bottom:2px;}
+
+  /* ---------- roadmap phase ---------- */
+  .grade-tabs{display:flex;gap:6px;margin-bottom:18px;overflow-x:auto;}
+  .grade-tab{
+    flex:none;padding:9px 14px;border-radius:999px;font-size:12.8px;font-weight:700;
+    border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;white-space:nowrap;
+  }
+  .grade-tab.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .grade-panel{display:none;}
+  .grade-panel.active{display:block;}
+  .phase-grid{display:flex;flex-direction:column;gap:10px;}
+  .phase-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+    padding:16px;display:flex;gap:12px;align-items:flex-start;
+  }
+  .phase-idx{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;color:var(--brand);
+    flex:none;width:30px;}
+  .phase-card h4{font-size:14.5px;font-weight:800;margin-bottom:5px;}
+  .phase-card p{font-size:12.8px;line-height:1.55;color:var(--ink-soft);}
+
+  /* ---------- checklist ---------- */
+  .check-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;}
+  .check-title{font-size:14.5px;font-weight:800;margin-bottom:14px;}
+  .check-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #EEF0F4;
+    font-size:13.6px;line-height:1.55;cursor:pointer;}
+  .check-item:last-of-type{border-bottom:none;}
+  .check-box{flex:none;width:20px;height:20px;border-radius:6px;border:1.6px solid #C7CCD9;
+    display:flex;align-items:center;justify-content:center;margin-top:1px;transition:.15s;}
+  .check-item.checked .check-box{background:var(--coral);border-color:var(--coral);}
+  .check-box svg{width:12px;height:12px;opacity:0;transition:.15s;}
+  .check-item.checked .check-box svg{opacity:1;}
+  .check-result{
+    margin-top:16px;padding:14px;border-radius:var(--radius-sm);
+    background:var(--brand-tint);font-size:13.2px;line-height:1.6;font-weight:600;color:var(--brand-deep);
+    text-align:center;
+  }
+  .check-result.warn{background:var(--coral-tint);color:#C1391A;}
+
+  /* ---------- cases ---------- */
+  .case-grid{display:flex;flex-direction:column;gap:10px;}
+  .case-card{
+    background:#fff;border:1px dashed var(--line);border-radius:var(--radius-sm);
+    padding:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  }
+  .case-card .cl h5{font-size:13.5px;font-weight:700;margin-bottom:4px;color:var(--ink-soft);}
+  .case-card .cl .metric{font-size:16.5px;font-weight:800;color:var(--brand-deep);}
+  .case-card .cl .metric .up{color:var(--coral);font-size:13px;margin-left:2px;}
+  .case-card .badge{font-size:11px;color:#9AA1B0;background:#F2F4F8;padding:5px 9px;border-radius:999px;white-space:nowrap;}
+  .case-fill{font-size:12px;color:#B0B6C4;text-align:center;margin-top:6px;}
+
+  .grad-strip{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px;}
+  .grad-title{font-size:13.5px;font-weight:800;margin-bottom:12px;}
+  .grad-chips{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{font-size:11.8px;font-weight:600;color:var(--brand-deep);background:var(--brand-tint);
+    padding:6px 11px;border-radius:999px;white-space:nowrap;}
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14.3px;cursor:pointer;gap:10px;}
+  .faq-q .plus{flex:none;font-size:18px;color:var(--brand);transition:.2s;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:.25s ease;font-size:13.4px;line-height:1.65;color:var(--ink-soft);}
+  .faq-item.open .faq-a{max-height:220px;margin-top:10px;}
+
+  /* ---------- contact / footer ---------- */
+  .contact-section{background:linear-gradient(160deg,#16204a,#0c1730);color:#fff;}
+  .contact-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:var(--radius);padding:20px;margin-top:20px;}
+  .contact-row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);align-items:flex-start;}
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .ic{flex:none;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.1);
+    display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .contact-row .cl{font-size:11.5px;color:#9AA6C4;margin-bottom:3px;}
+  .contact-row .cv{font-size:14px;font-weight:700;}
+  .contact-cta{
+    display:block;text-align:center;margin-top:18px;
+    background:var(--coral);color:#fff;font-weight:800;font-size:15px;
+    padding:16px;border-radius:14px;text-decoration:none;
+  }
+  .contact-cta-sub{
+    display:block;text-align:center;margin-top:10px;
+    color:#B7C1DB;font-weight:600;font-size:12.5px;text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .foot{font-size:11px;color:#7F8AB0;text-align:center;padding:26px 22px 40px;}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>2학기 무료 진단상담 접수중 · <b>에듀플렉스 하계점</b></span>
+  <a class="call" href="tel:0269531672">전화상담</a>
+</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow"><span class="dot"></span>VLT 16타입 학습유형검사 기반 매니지먼트</span>
+    <h1 class="hero-title">앉아있는 시간 말고,<br><em>우리 아이 유형</em>부터 다시 보세요</h1>
+    <p class="hero-sub">
+      같은 방식으로 관리해도 아이마다 반응은 다릅니다. 에듀플렉스 하계점은 VLT 16타입 검사로 아이의 성향과 학습 상태를 먼저 진단하고, 타입에 맞는 1:1 매니지먼트로 2학기를 설계합니다.
+    </p>
+    <div class="cta-row">
+      <a class="btn-primary" href="https://map.naver.com/p/entry/place/1249103298?placePath=%2Fticket%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608141005%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0682015&lat=37.6406433&c=15.00,0,0,0,dh" target="_blank" rel="noopener">2학기 무료 진단 신청 →</a>
+      <a class="btn-ghost" href="#vlt">VLT 검사 알아보기</a>
+    </div>
+    <div class="hero-meta">
+      <div><div class="num mono">16</div><div class="lbl">학습유형 타입</div></div>
+      <div><div class="num mono">3만+</div><div class="lbl">누적 진단 데이터</div></div>
+      <div><div class="num mono">1:1</div><div class="lbl">담임매니저 관리</div></div>
+    </div>
+  </section>
+
+  <!-- VS COMPARISON -->
+  <section class="reveal">
+    <div class="sec-eyebrow">Before / After</div>
+    <h2 class="sec-title">"관리해준다"는 말은 다 똑같지만,<br>기준이 되는 진단은 다릅니다</h2>
+    <p class="sec-desc">아이 성향을 모른 채 세우는 계획과, 타입을 정확히 진단한 뒤 세우는 계획은 처음부터 다릅니다.</p>
+
+    <div class="vs-grid">
+      <div class="vs-card dim">
+        <div class="vs-label">일반 관리형 · 학원</div>
+        <ul class="vs-list">
+          <li>모든 학생에게 같은 방식으로 동기부여</li>
+          <li>학습 습관 문제를 "의지 부족"으로만 진단</li>
+          <li>성적표만 보고 다음 계획을 세움</li>
+          <li>학생이 왜 흔들리는지는 알아보지 않음</li>
+        </ul>
+      </div>
+      <div class="vs-card lit">
+        <div class="vs-label">에듀플렉스 하계점</div>
+        <ul class="vs-list">
+          <li>VLT 16타입 검사로 성향·기질·학습동기를 먼저 진단</li>
+          <li>타입별 흔들리는 지점을 미리 파악해 대응</li>
+          <li>성적 + 실행력 + 대인관계까지 함께 분석</li>
+          <li>타입에 맞는 상담 화법과 학습법으로 매니지먼트</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead>
+          <tr><th>비교 항목</th><th>강의식 학원</th><th>관리형 공간</th><th class="col-us">에듀플렉스</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>학습유형 진단</td><td class="no">–</td><td class="no">–</td><td class="col-us yes">✓ VLT 16타입</td></tr>
+          <tr><td>마인드 코칭</td><td class="no">–</td><td class="no">–</td><td class="col-us yes">✓</td></tr>
+          <tr><td>개별 학습설계</td><td class="no">–</td><td class="part">△</td><td class="col-us yes">✓</td></tr>
+          <tr><td>매일 실행 점검</td><td class="no">–</td><td class="yes">✓</td><td class="col-us yes">✓ 역질문</td></tr>
+          <tr><td>과목별 개별수업</td><td>단체진도</td><td class="no">–</td><td class="col-us yes">✓ 1:1</td></tr>
+          <tr><td>시험대비</td><td class="part">△단체특강</td><td class="no">–</td><td class="col-us yes">✓ 학교별 5주</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">※ 일반적인 운영 형태 기준의 비교이며 기관별로 차이가 있을 수 있습니다.</p>
+  </section>
+
+  <!-- VLT SIGNATURE SECTION -->
+  <section class="vlt-section reveal" id="vlt">
+    <div class="sec-eyebrow">Signature Program</div>
+    <h2 class="sec-title">VLT 4G 검사,<br>우리 아이는 16타입 중 무엇일까요?</h2>
+    <p class="sec-desc">MBTI · CHAMP TEST(과목별 수준) · 공부공식™ 검사 · 250문항 온라인 검사를 종합해 학생의 타고난 성향, 학습 이유, 실행력을 객관적으로 진단합니다.</p>
+
+    <div class="vlt-stats">
+      <div class="vlt-stat"><div class="n">7년</div><div class="l">데이터 축적 기간</div></div>
+      <div class="vlt-stat"><div class="n">4가지</div><div class="l">검사 영역</div></div>
+      <div class="vlt-stat"><div class="n">16</div><div class="l">맞춤 매니지먼트 타입</div></div>
+    </div>
+
+    <div class="type-grid" id="typeGrid">
+      <div class="type-cell mono">01</div>
+      <div class="type-cell mono feat" data-d="자기 힘으로 공부해본 경험이 적고, 학원 스케줄과 강사 도움에 기대 성적을 유지하는 편입니다. 도움 없이는 성적이 흔들릴 수 있어 스스로 계획하고 실행하는 힘을 길러주는 것이 관건입니다.">03</div>
+      <div class="type-cell mono">04</div>
+      <div class="type-cell mono">05</div>
+      <div class="type-cell mono feat" data-d="한때 상위권이었지만 여러 이유로 성적이 떨어진 뒤, 조금만 하면 금방 회복될 거라 스스로를 다독이며 정작 꾸준한 실행은 미루는 편입니다. 현재 수준을 있는 그대로 인정하고 다시 쌓아가는 과정이 필요합니다.">06</div>
+      <div class="type-cell mono">07</div>
+      <div class="type-cell mono">08</div>
+      <div class="type-cell mono feat" data-d="학업·친구·미래 등 사소한 걱정이 많아 마음에 담아두는 상처가 많은 편입니다. 그 고민들이 집중을 흐트러뜨리고 자신감을 낮춰, 실력보다 낮은 성취로 이어지기 쉽습니다. 정서적 안정이 학습의 전제조건입니다.">09</div>
+      <div class="type-cell mono">10</div>
+      <div class="type-cell mono feat" data-d="주어진 과업을 묵묵히 성실하게 해내지만, 이해와 사고를 정리하는 방법이 서툴러 투입한 시간 대비 성과가 아쉬운 편입니다. 노력은 충분하므로, 사고하고 정리하는 학습법 훈련이 관건입니다.">11</div>
+      <div class="type-cell mono">12</div>
+      <div class="type-cell mono">13</div>
+      <div class="type-cell mono">14</div>
+      <div class="type-cell mono">15</div>
+      <div class="type-cell mono">16</div>
+    </div>
+    <p class="type-hint">색이 있는 4가지 대표 유형을 탭하면 간단한 설명을 볼 수 있어요</p>
+    <div class="type-detail" id="typeDetail">유형을 탭하면 설명이 여기에 표시됩니다</div>
+    <p class="type-hint">전체 16타입의 상세 결과와 처방은 개인 상담에서 1:1로 안내해드립니다</p>
+
+    <div class="vlt-note">
+      16가지 타입은 성적·학습의욕·실행력·대인관계·시험기술 등을 종합해 나뉩니다. 같은 성적이어도 원인과 처방은 타입마다 다르기 때문에, 상담 전 정확한 진단이 매니지먼트의 출발점이 됩니다. 검사 결과는 학생 개인정보로 관리되며, 담임매니저와의 1:1 상담에서만 자세히 안내해드립니다.
+    </div>
+  </section>
+
+  <!-- TIMELINE SC / DC -->
+  <section class="reveal">
+    <div class="sec-eyebrow">Daily Routine</div>
+    <h2 class="sec-title">진단이 실제 하루로<br>어떻게 이어지는지 보여드립니다</h2>
+    <p class="sec-desc">타입 진단은 상담에서 끝나지 않습니다. 매일의 SC · 학습 · DC 루틴 안에서 타입별 처방이 반복 실행됩니다.</p>
+
+    <div class="timeline">
+      <div class="tstep">
+        <div class="tmark">SC</div>
+        <div class="tbody">
+          <h3>스타트체크</h3>
+          <div class="ttime">등원 직후 10~15분</div>
+          <ul>
+            <li>그날의 계획과 목표를 담임매니저와 확인</li>
+            <li>타입별 흔들리기 쉬운 포인트 사전 점검</li>
+            <li>과목별 학습 순서와 핵심 파트 안내</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tstep mid">
+        <div class="tmark">학습</div>
+        <div class="tbody">
+          <h3>집중학습 + 개별수업</h3>
+          <div class="ttime">CHAMP 학습법 기반</div>
+          <ul>
+            <li>이해 → 사고 → 정리 → 암기 → 문제해결 순으로 학습</li>
+            <li>과목별 1:1 개별지도, 역질문 방식 튜터링</li>
+            <li>학습 방해요소 차단된 집중학습실 운영</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tstep">
+        <div class="tmark">DC</div>
+        <div class="tbody">
+          <h3>데일리체크</h3>
+          <div class="ttime">학생별 고정 시간 20~30분</div>
+          <ul>
+            <li>풀이 과정을 말로 설명하게 하는 역질문</li>
+            <li>과목별 이해도 기록, 부족한 부분 다음 계획에 반영</li>
+            <li>정신 · 학습 · 행동, 세 영역을 함께 점검</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRADE ROADMAP -->
+  <section class="reveal" id="roadmap">
+    <div class="sec-eyebrow">2nd Semester Roadmap</div>
+    <h2 class="sec-title">학년별로 다른<br>2학기 진단→실행 로드맵</h2>
+    <p class="sec-desc">초5부터 고3까지, 시기별 과제가 다릅니다. 타입 진단 결과에 따라 아래 단계가 개인별로 조정됩니다.</p>
+
+    <div class="grade-tabs" id="gradeTabs">
+      <div class="grade-tab active" data-g="elem">초5·6</div>
+      <div class="grade-tab" data-g="mid">중등</div>
+      <div class="grade-tab" data-g="h1">고1</div>
+      <div class="grade-tab" data-g="h23">고2·3</div>
+    </div>
+
+    <div class="grade-panel active" data-g="elem">
+      <div class="phase-grid">
+        <div class="phase-card"><div class="phase-idx">01</div><div><h4>진단</h4><p>VLT 검사로 학습 성향 파악, 독서·기록 습관 점검</p></div></div>
+        <div class="phase-card"><div class="phase-idx">02</div><div><h4>설계</h4><p>기초 학습력·어휘력 보완 중심의 학습 루틴 설계</p></div></div>
+        <div class="phase-card"><div class="phase-idx">03</div><div><h4>실행</h4><p>매일 SC·DC로 공부 습관을 몸에 익히는 훈련</p></div></div>
+        <div class="phase-card"><div class="phase-idx">04</div><div><h4>완성</h4><p>중학교 진학 대비, 자기주도학습 기반 다지기</p></div></div>
+      </div>
+    </div>
+
+    <div class="grade-panel" data-g="mid">
+      <div class="phase-grid">
+        <div class="phase-card"><div class="phase-idx">01</div><div><h4>진단</h4><p>VLT 검사 + 학교 수업·수행평가 현황 점검</p></div></div>
+        <div class="phase-card"><div class="phase-idx">02</div><div><h4>설계</h4><p>타입별 CHAMP 학습법 훈련 계획, 텀스케줄러 수립</p></div></div>
+        <div class="phase-card"><div class="phase-idx">03</div><div><h4>실행</h4><p>학교수업관리·수행평가관리, 시험목표 및 전략 수립</p></div></div>
+        <div class="phase-card"><div class="phase-idx">04</div><div><h4>완성</h4><p>시험결과분석 → 자기효능감 강화 → 고입 대비 전환</p></div></div>
+      </div>
+    </div>
+
+    <div class="grade-panel" data-g="h1">
+      <div class="phase-grid">
+        <div class="phase-card"><div class="phase-idx">01</div><div><h4>초기장악 4주</h4><p>VLT 검사 결과 기반 학습법 · 자아정체감 · 진로 가벼운 탐색</p></div></div>
+        <div class="phase-card"><div class="phase-idx">02</div><div><h4>온보딩</h4><p>학교수업·수행평가 관리, 시험목표 및 전략 수립</p></div></div>
+        <div class="phase-card"><div class="phase-idx">03</div><div><h4>트리거</h4><p>슬럼프 관리, 자기긍정감 강화, 의욕 재충전</p></div></div>
+        <div class="phase-card"><div class="phase-idx">04</div><div><h4>연계</h4><p>진로목표수립으로 이어지는 첫 학생부 방향 설정</p></div></div>
+      </div>
+    </div>
+
+    <div class="grade-panel" data-g="h23">
+      <div class="phase-grid">
+        <div class="phase-card"><div class="phase-idx">01</div><div><h4>진단</h4><p>모의고사·내신 데이터 + VLT 타입으로 전형 경쟁력 진단</p></div></div>
+        <div class="phase-card"><div class="phase-idx">02</div><div><h4>설계</h4><p>수시·정시 갈림길, 학교별 맞춤 5주 시험대비 설계</p></div></div>
+        <div class="phase-card"><div class="phase-idx">03</div><div><h4>실행</h4><p>시험멘탈관리 + 오답원인분석 + 모의고사 관리</p></div></div>
+        <div class="phase-card"><div class="phase-idx">04</div><div><h4>완성</h4><p>입시컨설팅 연계, 지원과 합격을 완성하는 최종 전략</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="reveal">
+    <div class="sec-eyebrow">Self Check</div>
+    <h2 class="sec-title">혹시, 우리 아이 얘기인가요?</h2>
+    <p class="sec-desc">지난 학기 아래 모습이 있었다면, 방식보다 진단이 먼저일 수 있습니다.</p>
+
+    <div class="check-card">
+      <div class="check-title">1학기, 이런 모습이 있었다면 체크해보세요</div>
+      <div id="checkList">
+        <label class="check-item"><span class="check-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>학원 숙제만 하다가 1학기가 끝났습니다</label>
+        <label class="check-item"><span class="check-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>진도는 다 나갔다는데, 성적은 그대로였습니다</label>
+        <label class="check-item"><span class="check-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>오늘 뭘 공부했는지 물어보면 "했어"가 전부입니다</label>
+        <label class="check-item"><span class="check-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>시험 2주 전에도 뭐부터 해야 할지 못 정합니다</label>
+        <label class="check-item"><span class="check-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>왜 흔들리는지, 부모도 아이도 정확히 모릅니다</label>
+      </div>
+      <div class="check-result" id="checkResult">0개 체크하셨습니다 — 2개 이상이면, 방식보다 진단이 먼저입니다</div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="reveal">
+    <div class="sec-eyebrow">Real Case</div>
+    <h2 class="sec-title">에듀플렉스 하계점이 만든 변화</h2>
+    <p class="sec-desc">실제 재원생 성적 향상 사례입니다. 더 많은 사례는 하계 에듀플렉스 명예의 전당에서 확인하실 수 있어요.</p>
+    <div class="case-grid">
+      <div class="case-card"><div class="cl"><h5>창동고 2학년 · 사회문화</h5><div class="metric">5등급 → 1등급 <span class="up">↑4</span></div></div><span class="badge">기말고사</span></div>
+      <div class="case-card"><div class="cl"><h5>창동고 2학년 · 한국지리</h5><div class="metric">5등급 → 1등급 <span class="up">↑4</span></div></div><span class="badge">기말고사</span></div>
+      <div class="case-card"><div class="cl"><h5>혜성여고 2학년 · 국어</h5><div class="metric">5등급 → 2등급 <span class="up">↑3</span></div></div><span class="badge">기말고사</span></div>
+      <div class="case-card"><div class="cl"><h5>자운고 1학년 · 수학</h5><div class="metric">100점 만점 달성 🎉</div></div><span class="badge">중간고사</span></div>
+      <div class="case-card"><div class="cl"><h5>중평중 3학년 · 국어·영어</h5><div class="metric">전과목 100점 만점 🎉</div></div><span class="badge">기말고사</span></div>
+      <div class="case-card"><div class="cl"><h5>하계중 2학년 · 과학</h5><div class="metric">100점 만점 달성 🎉</div></div><span class="badge">기말고사</span></div>
+    </div>
+    <p class="case-fill">※ 학생·학부모 동의를 받아 게재하며, 결과는 학생 상황에 따라 다를 수 있습니다.</p>
+
+    <div class="grad-strip">
+      <div class="grad-title">🎓 졸업생 합격 결과</div>
+      <div class="grad-chips">
+        <span class="chip">서울대 역사학부</span>
+        <span class="chip">연세대 언더우드학부</span>
+        <span class="chip">고려대 국제학부</span>
+        <span class="chip">성균관대 글로벌경영</span>
+        <span class="chip">이화여대 영어영문</span>
+        <span class="chip">경희대 수학과</span>
+        <span class="chip">동국대 교육학과</span>
+        <span class="chip">건국대 산업디자인</span>
+        <span class="chip">외 다수</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="reveal">
+    <div class="sec-eyebrow">FAQ</div>
+    <h2 class="sec-title">가장 많이 하시는 질문</h2>
+    <div id="faqList">
+      <div class="faq-item">
+        <div class="faq-q"><span>VLT 검사, 꼭 받아야 하나요?</span><span class="plus">+</span></div>
+        <div class="faq-a">타입에 따라 흔들리는 지점과 효과적인 상담 방식이 다릅니다. 검사 없이 세우는 계획은 일반적인 계획일 뿐입니다. 정확한 진단이 맞춤 매니지먼트의 출발점이라 등원 초기에 진행합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>그래도 학원 수업이 먼저 아닐까요?</span><span class="plus">+</span></div>
+        <div class="faq-a">듣는 공부와 내 것으로 만드는 공부는 효과부터 다릅니다. 에듀플렉스는 학습법 코칭과 집중도 높은 순공 훈련, 개별 수업으로 진짜 공부가 작동하도록 매일 관리합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>관리형 독서실이랑 뭐가 다른 건가요?</span><span class="plus">+</span></div>
+        <div class="faq-a">자리와 시간을 관리해주는 곳과, 공부가 작동하도록 만들어주는 곳의 차이입니다. 앉아 있는 시간이 아니라 계획·실행·이해·보완의 사이클을 담임매니저가 타입에 맞게 매일 코칭합니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section reveal" id="contact">
+    <div class="sec-eyebrow" style="color:#FF9C7F;">Contact</div>
+    <h2 class="sec-title" style="color:#fff;">우리 아이의 타입,<br>상담에서 정확히 확인하세요</h2>
+    <p class="sec-desc" style="color:#B7C1DB;">VLT 16타입 검사와 2학기 학습 플랜을 무료 상담에서 함께 안내해드립니다.</p>
+
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="ic">📍</div>
+        <div><div class="cl">지점 주소</div><div class="cv">서울시 노원구 동일로 204가길 34<br>씨앤미 2층 · 에듀플렉스 하계점</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">📞</div>
+        <div><div class="cl">전화 상담</div><div class="cv">02-6953-1672</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">🗓️</div>
+        <div><div class="cl">상담 안내</div><div class="cv">2학기 무료 진단상담 접수 중</div></div>
+      </div>
+    </div>
+
+    <a class="contact-cta" href="https://map.naver.com/p/entry/place/1249103298?placePath=%2Fticket%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608141005%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0682015&lat=37.6406433&c=15.00,0,0,0,dh" target="_blank" rel="noopener">네이버로 무료 상담 예약하기</a>
+    <a class="contact-cta-sub" href="tel:0269531672">또는 전화로 바로 문의하기 02-6953-1672</a>
+  </section>
+
+  <div class="foot">
+    © 에듀플렉스 하계점 · 서울시 노원구 동일로 204가길 34 씨앤미 2층<br>
+    등록 여부는 상담 후 편하게 결정하실 수 있습니다.
+  </div>
+
+</div>
+
+<script>
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // vlt type detail
+  const detailBox = document.getElementById('typeDetail');
+  document.querySelectorAll('.type-cell.feat').forEach(cell=>{
+    cell.addEventListener('click', ()=>{
+      document.querySelectorAll('.type-cell.feat').forEach(c=>c.classList.remove('active'));
+      cell.classList.add('active');
+      detailBox.textContent = 'TYPE ' + cell.textContent.trim() + ' — ' + cell.dataset.d;
+    });
+  });
+
+  // checklist
+  const items = document.querySelectorAll('.check-item');
+  const resultEl = document.getElementById('checkResult');
+  items.forEach(it=>{
+    it.addEventListener('click', ()=>{
+      it.classList.toggle('checked');
+      const n = document.querySelectorAll('.check-item.checked').length;
+      resultEl.textContent = n + '개 체크하셨습니다 — 2개 이상이면, 방식보다 진단이 먼저입니다';
+      resultEl.classList.toggle('warn', n>=2);
+    });
+  });
+
+  // grade tabs
+  document.querySelectorAll('.grade-tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      document.querySelectorAll('.grade-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.grade-panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector('.grade-panel[data-g="'+tab.dataset.g+'"]').classList.add('active');
+    });
+  });
+
+  // faq
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click', ()=>{
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
